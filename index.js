@@ -40,15 +40,15 @@ function handleButton(elem){
 	switch(elem.id){
 		case "0":
 			rockSamples++;
-			document.getElementById("rocksamples").innerText = "Rock samples:" + rockSamples;
+			document.getElementById("rocksamples").innerText = "Friend 1 samples:" + rockSamples;
 			break;
 		case "1":
 			paperSamples++;
-			document.getElementById("papersamples").innerText = "Paper samples:" + paperSamples;
+			document.getElementById("papersamples").innerText = "Friend 2 samples:" + paperSamples;
 			break;
 		case "2":
 			scissorsSamples++;
-			document.getElementById("scissorssamples").innerText = "Scissors samples:" + scissorsSamples;
+			document.getElementById("scissorssamples").innerText = "Friend 3 samples:" + scissorsSamples;
 			break;
 	}
 	label = parseInt(elem.id);
@@ -69,13 +69,13 @@ async function predict() {
     var predictionText = "";
     switch(classId){
 		case 0:
-			predictionText = "I see Rock";
+			predictionText = "I see Friend 1";
 			break;
 		case 1:
-			predictionText = "I see Paper";
+			predictionText = "I see Friend 2";
 			break;
 		case 2:
-			predictionText = "I see Scissors";
+			predictionText = "I see Friend 3";
 			break;
 	}
 	document.getElementById("prediction").innerText = predictionText;
